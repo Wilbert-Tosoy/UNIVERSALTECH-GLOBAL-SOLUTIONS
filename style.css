@@ -50,8 +50,59 @@ body main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  width: 100vw;
 }
-body main #showcase2 img {
+body main #showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 400px;
+}
+body main #showcase #showcase1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 10%;
+  padding-right: 30px;
+}
+body main #showcase #showcase1 h1 {
+  margin-bottom: 30px;
+}
+body main #showcase #showcase1 p {
+  margin-bottom: 20px;
+  color: #444;
+  font-size: small;
+}
+body main #showcase #showcase1 button {
   width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #4903B8;
+  color: white;
+}
+body main #showcase #showcase2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  background-color: #444;
+}
+body main #showcase #showcase2 img {
+  display: block;
+  width: 400px;
   height: auto;
+  z-index: 1;
+}
+body main #showcase #showcase2 .background {
+  width: 400px;
+  height: 267px;
+  position: absolute;
+  background-color: #4903B8;
+  right: 15px;
+  top: 20px;
 }/*# sourceMappingURL=style.css.map */

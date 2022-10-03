@@ -2,7 +2,8 @@
 @import "resets";
 
 // Variables
-$primary-color: #4903B8;
+$purple: #4903B8;
+$light-gray: #444;
 
 // Mixins
 @mixin flex-container($j-content: center, $a-items: center, $direction: row) {
@@ -53,8 +54,8 @@ body {
 
                         a:hover,
                         a:focus {
-                            color: $primary-color;
-                            border-bottom: 3px solid $primary-color;
+                            color: $purple;
+                            border-bottom: 3px solid $purple;
                             transition: 0.1s;
                         }
                     }
@@ -65,11 +66,60 @@ body {
 
     main {
         @include flex-container();
+        width: 100vw;
 
-        #showcase2 {
-            img {
-                width: 200px;
-                height: auto;
+        #showcase {
+            @include flex-container();
+            height: 400px;
+
+            #showcase1 {
+                @include flex-container($a-items: flex-start, $direction: column);
+                padding-left: 10%;
+                padding-right: 30px;
+
+                h1 {
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    margin-bottom: 20px;
+                    color: $light-gray;
+                    font-size: small;
+                }
+
+                button {
+                    width: 200px;
+                    height: 40px;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    background-color: $purple;
+                    color: white;
+                }
+            }
+
+            #showcase2 {
+                @include flex-container($direction: column);
+                position: relative;
+
+
+                background-color: #444;
+
+                img {
+                    display: block;
+                    width: 400px;
+                    height: auto;
+                    z-index: 1;
+                }
+
+                .background {
+                    width: 400px;
+                    height: 267px;
+                    position: absolute;
+                    background-color: #4903B8;
+                    right: 15px;
+                    top: 20px;
+                }
             }
         }
     }
