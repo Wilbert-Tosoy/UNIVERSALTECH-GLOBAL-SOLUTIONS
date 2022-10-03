@@ -422,7 +422,7 @@ body {
                 z-index: -1;
                 border-radius: 50%;
                 top: 0;
-                right: -200px;
+                right: 0;
             }
         }
     }
@@ -430,7 +430,7 @@ body {
     footer {
         @include flex-container($direction: column);
         background-color: #FAFAFA;
-        width: 100%;
+        width: 100vw;
 
         #footer-1 {
             @include flex-container($j-content: space-between);
@@ -461,26 +461,100 @@ body {
 
         #footer-2 {
             @include grid-container(1fr 1fr 1fr 1fr, 1fr);
+            width: 80vw;
+            margin-top: 20px;
 
             #about {
                 @include flex-container($direction: column);
+                grid-column: 1 / 2;
 
                 h4 {
                     align-self: flex-start;
+                    padding-left: 10px;
                 }
 
                 img {
                     width: 20px;
                     height: 20px;
+                    display: flex;
+                }
+
+                p {
+                    font-size: smaller;
                 }
 
                 #address {
-                    @include flex-container();
+                    @include flex-container($j-content: flex-start);
+                    margin-top: 140px;
+
+                    p {
+                        font-size: small;
+                    }
+
+                    img {
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            #company {
+                padding-left: 60px;
+                grid-column: 2 / 3;
+
+                h4 {
+                    margin-bottom: 20px;
                 }
 
-                #contact {
-                    @include flex-container();
+                a {
+                    color: black;
+                    font-size: small;
                 }
+            }
+
+            #services {
+                grid-column: 3 / 4;
+
+                padding-left: 60px;
+
+                h4 {
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    color: black;
+                    font-size: small;
+                }
+            }
+
+            #contact {
+                grid-column: 4 / 5;
+
+                padding-left: 60px;
+
+                #email {
+                    width: 100%;
+                    margin-bottom: 5px;
+                    padding: 5px;
+                }
+
+                #message {
+                    resize: none;
+                    padding-left: 5px;
+                }
+            }
+        }
+
+        #footer-3 {
+            margin-top: 50px;
+            height: 80px;
+            background-color: $purple;
+            width: 100vw;
+
+            @include flex-container();
+
+            #copyright {
+                font-size: small;
+                color: white;
             }
         }
     }

@@ -440,7 +440,7 @@ body main #testimonials #circle-1 {
   z-index: -1;
   border-radius: 50%;
   top: 0;
-  right: -200px;
+  right: 0;
 }
 body footer {
   display: flex;
@@ -448,7 +448,7 @@ body footer {
   align-items: center;
   flex-direction: column;
   background-color: #FAFAFA;
-  width: 100%;
+  width: 100vw;
 }
 body footer #footer-1 {
   display: flex;
@@ -478,29 +478,87 @@ body footer #footer-2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  width: 80vw;
+  margin-top: 20px;
 }
 body footer #footer-2 #about {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  grid-column: 1/2;
 }
 body footer #footer-2 #about h4 {
   align-self: flex-start;
+  padding-left: 10px;
 }
 body footer #footer-2 #about img {
   width: 20px;
   height: 20px;
+  display: flex;
+}
+body footer #footer-2 #about p {
+  font-size: smaller;
 }
 body footer #footer-2 #about #address {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
+  margin-top: 140px;
 }
-body footer #footer-2 #about #contact {
+body footer #footer-2 #about #address p {
+  font-size: small;
+}
+body footer #footer-2 #about #address img {
+  margin-right: 10px;
+}
+body footer #footer-2 #company {
+  padding-left: 60px;
+  grid-column: 2/3;
+}
+body footer #footer-2 #company h4 {
+  margin-bottom: 20px;
+}
+body footer #footer-2 #company a {
+  color: black;
+  font-size: small;
+}
+body footer #footer-2 #services {
+  grid-column: 3/4;
+  padding-left: 60px;
+}
+body footer #footer-2 #services h4 {
+  margin-bottom: 20px;
+}
+body footer #footer-2 #services a {
+  color: black;
+  font-size: small;
+}
+body footer #footer-2 #contact {
+  grid-column: 4/5;
+  padding-left: 60px;
+}
+body footer #footer-2 #contact #email {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+body footer #footer-2 #contact #message {
+  resize: none;
+  padding-left: 5px;
+}
+body footer #footer-3 {
+  margin-top: 50px;
+  height: 80px;
+  background-color: #4903B8;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+body footer #footer-3 #copyright {
+  font-size: small;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
