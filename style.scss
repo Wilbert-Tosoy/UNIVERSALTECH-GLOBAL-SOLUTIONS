@@ -299,5 +299,13 @@ body {
                 }
             }
         }
+
+        #pricing-plans {
+            width: 80vw;
+
+            #packages {
+                @include flex-container($j-content: space-between);
+            }
+        }
     }
 }

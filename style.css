@@ -310,4 +310,13 @@ body main #workflow #Titles #h6-3 {
 }
 body main #workflow #Titles #h6-4 {
   grid-column: 13/17;
+}
+body main #pricing-plans {
+  width: 80vw;
+}
+body main #pricing-plans #packages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }/*# sourceMappingURL=style.css.map */
