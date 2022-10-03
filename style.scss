@@ -1,0 +1,76 @@
+// Partials
+@import "resets";
+
+// Variables
+$primary-color: #4903B8;
+
+// Mixins
+@mixin flex-container($j-content: center, $a-items: center, $direction: row) {
+    display: flex;
+    justify-content: $j-content;
+    align-items: $a-items;
+    flex-direction: $direction;
+}
+
+@mixin grid-container($columns, $rows) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}
+
+body {
+    @include flex-container($direction: column);
+    font-family: Arial, Helvetica, sans-serif;
+
+    header {
+        @include flex-container($j-content: space-between);
+
+        width: 80vw;
+        border-bottom: 1px solid black;
+
+        #company-logo {
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        #navbar-container {
+            nav {
+                ul {
+                    @include flex-container();
+
+                    li {
+                        list-style-type: none;
+                        margin: 0 20px;
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+                            font-weight: 700;
+                            padding: 10px 0;
+                        }
+
+                        a:hover,
+                        a:focus {
+                            color: $primary-color;
+                            border-bottom: 3px solid $primary-color;
+                            transition: 0.1s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        @include flex-container();
+
+        #showcase2 {
+            img {
+                width: 200px;
+                height: auto;
+            }
+        }
+    }
+}
